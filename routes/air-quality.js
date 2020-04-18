@@ -21,7 +21,6 @@ var getDates = function(startDate, endDate) {
 router.get("/:country/:region/:city", function (req, res, next) {
   let startDate = req.query.startDate.split('-'), endDate = req.query.endDate.split('-');
   var dates = getDates(new Date(startDate), new Date(endDate));
-  console.log(new Date(startDate))
   axios
     .get(
       `http://berkeleyearth.lbl.gov/air-quality/maps/cities/${req.params.country}/${req.params.region}/${req.params.city}.json`
@@ -54,7 +53,6 @@ router.get("/:country/:region/:city", function (req, res, next) {
 router.get("/:country", function (req, res, next) {
   let startDate = req.query.startDate.split('-'), endDate = req.query.endDate.split('-');
   var dates = getDates(new Date(startDate), new Date(endDate));
-  console.log(new Date(startDate))
   axios
     .get(
       `http://berkeleyearth.lbl.gov/air-quality/maps/cities/${req.params.country}/${req.params.country}.json`
@@ -87,7 +85,6 @@ router.get("/:country", function (req, res, next) {
 router.get("/:country/:region", function (req, res, next) {
   let startDate = req.query.startDate.split('-'), endDate = req.query.endDate.split('-');
   var dates = getDates(new Date(startDate), new Date(endDate));
-  console.log(new Date(startDate))
   axios
     .get(
       `http://berkeleyearth.lbl.gov/air-quality/maps/cities/${req.params.country}/${req.params.region}/${req.params.region}.json`
@@ -117,4 +114,54 @@ router.get("/:country/:region", function (req, res, next) {
  
 });
 
+
+router.get("/countries", function (req, res, next) {
+  axios
+    .get(
+      'http://berkeleyearth.lbl.gov/air-quality/maps/cities/country_averages.json'
+    )
+    .then((d) => {
+      let countries = d.data.map((el) => {
+        return {
+          "countryName": el[0],
+          "countryID":el[0].replace(/ /g,"_")
+        }
+      })
+      res.json(countries)
+    })
+    .catch(error => res.json({ "error": error.message }));
+ 
+});
+
+router.get("/cities", function (req, res, next) {
+  let country = req.query.country
+  axios
+    .get(
+      'http://berkeleyearth.lbl.gov/air-quality/maps/cities/city_averages.json'
+    )
+    .then((d) => {
+      let cities = d.data.map((el) => {
+        let obj = {
+          country:el[0],
+          "countryID":el[0].replace(/ /g,"_"),
+          region:el[1],
+          "regionID":el[0].replace(/ /g,"_"),
+          city:el[2],
+          "cityID":el[0].replace(/ /g,"_"),
+        }
+        return obj
+      })
+      if (country)
+        {
+          let obj = []
+          cities.forEach((el) => {
+            if (el.countryID === country) obj.push(el)
+          })
+          res.json(obj)
+        }
+      else res.json(cities)
+    })
+    .catch(error => res.json({ "error": error.message }));
+ 
+});
 module.exports = router;
