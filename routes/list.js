@@ -5,50 +5,46 @@ const axios = require("axios");
 router.get("/countries", function (req, res, next) {
   axios
     .get(
-      'http://berkeleyearth.lbl.gov/air-quality/maps/cities/country_averages.json'
+      "http://berkeleyearth.lbl.gov/air-quality/maps/cities/country_averages.json"
     )
     .then((d) => {
       let countries = d.data.Countries.map((el) => {
         return {
-          "countryName": el[0],
-          "countryID":el[0].replace(/ /g,"_")
-        }
-      })
-      res.json(countries)
+          countryName: el[0],
+          countryID: el[0].replace(/ /g, "_"),
+        };
+      });
+      res.json(countries);
     })
-    .catch(error => res.json({ "error": error.message }));
- 
+    .catch((error) => res.json({ error: error.message }));
 });
 
 router.get("/cities", function (req, res, next) {
-  let country = req.query.country
+  let countryFilter = req.query.country;
   axios
-    .get(
-      'http://berkeleyearth.lbl.gov/air-quality/maps/cities/city_averages.json'
-    )
+    .get("http://berkeleyearth.lbl.gov/air-quality/maps/cities/city_list.json")
     .then((d) => {
-      let cities = d.data.Cities.map((el) => {
-        let obj = {
-          country:el[0],
-          "countryID":el[0].replace(/ /g,"_"),
-          region:el[1],
-          "regionID":el[0].replace(/ /g,"_"),
-          city:el[2],
-          "cityID":el[0].replace(/ /g,"_"),
-        }
-        return obj
-      })
-      if (country)
-        {
-          let obj = []
-          cities.forEach((el) => {
-            if (el.countryID === country) obj.push(el)
-          })
-          res.json(obj)
-        }
-      else res.json(cities)
+      let cities = [];
+      d.data.forEach((country) => {
+        country.regions.forEach((region) => {
+          region.cities.forEach((city) => {
+            let obj = {
+              countryName: country.country.replace(/_/g, " "),
+              countryID: country.country,
+              regionName: region.region.replace(/_/g, " "),
+              regionID: region.region.replace(/ /g, "_"),
+              cityName: city.replace(/_/g, " "),
+              cityID: city.replace(/ /g, "_"),
+            };
+            cities.push(obj);
+          });
+        });
+      });
+      if (countryFilter) {
+        cities = cities.filter((city) => city["countryID"] === countryFilter);
+      }
+      res.json(cities);
     })
-    .catch(error => res.json({ "error": error.message }));
- 
+    .catch((error) => res.json({ error: error.message }));
 });
 module.exports = router;
