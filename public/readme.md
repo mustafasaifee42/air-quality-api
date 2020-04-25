@@ -35,9 +35,9 @@ Git Repo: [https://github.com/mustafasaifee42/air-quality-api](https://github.co
 
 **Query Parameters**
 
-| Parameter | Type   | Description                               | Compulsary |
-| --------- | ------ | ----------------------------------------- | ---------- |
-| country   | string | Used to get all a cities of given country | false      |
+| Parameter | Type   | Description                               | Required |
+| --------- | ------ | ----------------------------------------- | -------- |
+| country   | string | Used to get all a cities of given country | false    |
 
 **Example Request URL**
 
@@ -82,10 +82,10 @@ Git Repo: [https://github.com/mustafasaifee42/air-quality-api](https://github.co
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                       | Compulsary |
-| --------- | ------ | --------------------------------------------------------------------------------- | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
+| Parameter | Type   | Description                                                                       | Required |
+| --------- | ------ | --------------------------------------------------------------------------------- | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true     |
 
 **Example Request URL**
 
@@ -126,10 +126,10 @@ Git Repo: [https://github.com/mustafasaifee42/air-quality-api](https://github.co
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                       | Compulsary |
-| --------- | ------ | --------------------------------------------------------------------------------- | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
+| Parameter | Type   | Description                                                                       | Required |
+| --------- | ------ | --------------------------------------------------------------------------------- | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true     |
 
 **Example Request URL**
 
@@ -168,10 +168,10 @@ Git Repo: [https://github.com/mustafasaifee42/air-quality-api](https://github.co
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                       | Compulsary |
-| --------- | ------ | --------------------------------------------------------------------------------- | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
+| Parameter | Type   | Description                                                                       | Required |
+| --------- | ------ | --------------------------------------------------------------------------------- | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true     |
 
 **Example Request URL**
 
@@ -234,10 +234,10 @@ Git Repo: [https://github.com/mustafasaifee42/air-quality-api](https://github.co
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                       | Compulsary |
-| --------- | ------ | --------------------------------------------------------------------------------- | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
+| Parameter | Type   | Description                                                                       | Required |
+| --------- | ------ | --------------------------------------------------------------------------------- | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true     |
 
 **Example Request URL**
 
@@ -300,10 +300,10 @@ Git Repo: [https://github.com/mustafasaifee42/air-quality-api](https://github.co
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                    | Compulsary |
-| --------- | ------ | ------------------------------------------------------------------------------ | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM`** | true       |
+| Parameter | Type   | Description                                                                    | Required |
+| --------- | ------ | ------------------------------------------------------------------------------ | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM`** | true     |
 
 **Example Request URL**
 
@@ -366,10 +366,10 @@ Git Repo: [https://github.com/mustafasaifee42/air-quality-api](https://github.co
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                    | Compulsary |
-| --------- | ------ | ------------------------------------------------------------------------------ | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM`** | true       |
+| Parameter | Type   | Description                                                                    | Required |
+| --------- | ------ | ------------------------------------------------------------------------------ | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM`** | true     |
 
 **Example Request URL**
 

@@ -33,9 +33,9 @@ This is an unofficial rest API for getting air quality data from [Berkley Earth]
 
 **Query Parameters**
 
-| Parameter | Type   | Description                               | Compulsary |
-| --------- | ------ | ----------------------------------------- | ---------- |
-| country   | string | Used to get all a cities of given country | false      |
+| Parameter | Type   | Description                               | Required |
+| --------- | ------ | ----------------------------------------- | -------- |
+| country   | string | Used to get all a cities of given country | false    |
 
 **Example Request URL**
 
@@ -80,10 +80,10 @@ This is an unofficial rest API for getting air quality data from [Berkley Earth]
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                       | Compulsary |
-| --------- | ------ | --------------------------------------------------------------------------------- | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
+| Parameter | Type   | Description                                                                       | Required |
+| --------- | ------ | --------------------------------------------------------------------------------- | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true     |
 
 **Example Request URL**
 
@@ -124,10 +124,10 @@ This is an unofficial rest API for getting air quality data from [Berkley Earth]
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                       | Compulsary |
-| --------- | ------ | --------------------------------------------------------------------------------- | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
+| Parameter | Type   | Description                                                                       | Required |
+| --------- | ------ | --------------------------------------------------------------------------------- | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true     |
 
 **Example Request URL**
 
@@ -166,10 +166,10 @@ This is an unofficial rest API for getting air quality data from [Berkley Earth]
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                       | Compulsary |
-| --------- | ------ | --------------------------------------------------------------------------------- | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
+| Parameter | Type   | Description                                                                       | Required |
+| --------- | ------ | --------------------------------------------------------------------------------- | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true     |
 
 **Example Request URL**
 
@@ -232,10 +232,10 @@ This is an unofficial rest API for getting air quality data from [Berkley Earth]
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                       | Compulsary |
-| --------- | ------ | --------------------------------------------------------------------------------- | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
+| Parameter | Type   | Description                                                                       | Required |
+| --------- | ------ | --------------------------------------------------------------------------------- | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true     |
 
 **Example Request URL**
 
@@ -298,10 +298,10 @@ This is an unofficial rest API for getting air quality data from [Berkley Earth]
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                    | Compulsary |
-| --------- | ------ | ------------------------------------------------------------------------------ | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM`** | true       |
+| Parameter | Type   | Description                                                                    | Required |
+| --------- | ------ | ------------------------------------------------------------------------------ | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM`** | true     |
 
 **Example Request URL**
 
@@ -364,10 +364,10 @@ This is an unofficial rest API for getting air quality data from [Berkley Earth]
 
 **Query Parameters**
 
-| Parameter | Type   | Description                                                                    | Compulsary |
-| --------- | ------ | ------------------------------------------------------------------------------ | ---------- |
-| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM`**                 | true       |
-| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM`** | true       |
+| Parameter | Type   | Description                                                                    | Required |
+| --------- | ------ | ------------------------------------------------------------------------------ | -------- |
+| startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM`**                 | true     |
+| endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM`** | true     |
 
 **Example Request URL**
 
