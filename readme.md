@@ -314,20 +314,20 @@ This is an unofficial rest API for getting air quality data from [Berkley Earth]
 ```
 [
   {
-    "Month": "2016-01",
+    "Month": "2016-04",
     "PM2.5": {
-      "minValue": 4.4,
-      "maxValue": 12.4,
-      "avgValue": 8.104166666666666,
-      "noOfObservations": 24,
-      "totalNoOfPossibleObservations": 24
+      "minValue": 1.3,
+      "maxValue": 18.7,
+      "avgValue": 6.281249999999997,
+      "noOfObservations": 720,
+      "totalNoOfPossibleObservations": 720
     },
     "PM10_mask": {
-      "minValue": 0.01,
+      "minValue": 0,
       "maxValue": 0.01,
-      "avgValue": 0.010000000000000004,
-      "noOfObservations": 24,
-      "totalNoOfPossibleObservations": 24
+      "avgValue": 0.000041666666666666665,
+      "noOfObservations": 720,
+      "totalNoOfPossibleObservations": 720
     }
   },
   ...
@@ -380,20 +380,20 @@ This is an unofficial rest API for getting air quality data from [Berkley Earth]
 ```
 [
   {
-    "Month": "2016-01",
+    "Month": "2016-04",
     "PM2.5": {
-      "minValue": 4.4,
-      "maxValue": 12.4,
-      "avgValue": 8.104166666666666,
-      "noOfObservations": 24,
-      "totalNoOfPossibleObservations": 24
+      "minValue": 1.3,
+      "maxValue": 18.7,
+      "avgValue": 6.281249999999997,
+      "noOfObservations": 720,
+      "totalNoOfPossibleObservations": 720
     },
     "PM10_mask": {
-      "minValue": 0.01,
+      "minValue": 0,
       "maxValue": 0.01,
-      "avgValue": 0.010000000000000004,
-      "noOfObservations": 24,
-      "totalNoOfPossibleObservations": 24
+      "avgValue": 0.000041666666666666665,
+      "noOfObservations": 720,
+      "totalNoOfPossibleObservations": 720
     }
   },
   ...
