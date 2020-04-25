@@ -2,6 +2,8 @@
 
 This is an unofficial rest API for getting air quality data from [Berkley Earth](http://berkeleyearth.org/) (PM 2.5 and PM 10 levels). The data filee from which the data is fetched are [here](http://berkeleyearth.lbl.gov/air-quality/maps/cities/)
 
+Git Repo: [https://github.com/mustafasaifee42/air-quality-api](https://github.com/mustafasaifee42/air-quality-api)
+
 ## Endpoints
 
 ### List countries whose data is available
@@ -37,7 +39,8 @@ This is an unofficial rest API for getting air quality data from [Berkley Earth]
 | --------- | ------ | ----------------------------------------- | ---------- |
 | country   | string | Used to get all a cities of given country | false      |
 
-Example Request URL
+**Example Request URL**
+
 `https://berkleyearth-air-quality-api.herokuapp.com/list/cities?country=United States of America`
 
 **Response**
@@ -84,7 +87,8 @@ Example Request URL
 | startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
 | endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
 
-Example Request URL
+**Example Request URL**
+
 `https://berkleyearth-air-quality-api.herokuapp.com/air-quality/hourly-data/United_States_of_America?startDate=2020-01-01&endDate=2020-02-01`
 
 **Response**
@@ -127,7 +131,8 @@ Example Request URL
 | startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
 | endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
 
-Example Request URL
+**Example Request URL**
+
 `https://berkleyearth-air-quality-api.herokuapp.com/air-quality/hourly-data/United_States_of_America/New_York/New_York_City?startDate=2020-01-01&endDate=2020-02-01`
 
 **Response**
@@ -168,7 +173,8 @@ Example Request URL
 | startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
 | endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
 
-Example Request URL
+**Example Request URL**
+
 `https://berkleyearth-air-quality-api.herokuapp.com/air-quality/daily-average/United_States_of_America?startDate=2020-01-01&endDate=2020-02-01`
 
 **Response**
@@ -233,7 +239,8 @@ Example Request URL
 | startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM-DD`**                 | true       |
 | endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM-DD`** | true       |
 
-Example Request URL
+**Example Request URL**
+
 `https://berkleyearth-air-quality-api.herokuapp.com/air-quality/daily-average/United_States_of_America/New_York/New_York_City?startDate=2020-01-01&endDate=2020-02-01`
 
 **Response**
@@ -298,7 +305,8 @@ Example Request URL
 | startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM`**                 | true       |
 | endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM`** | true       |
 
-Example Request URL
+**Example Request URL**
+
 `https://berkleyearth-air-quality-api.herokuapp.com/air-quality/monthly-average/United_States_of_America?startDate=2019-01&endDate=2020-01`
 
 **Response**
@@ -363,7 +371,8 @@ Example Request URL
 | startDate | string | Data is fetched starting from this date. **Format: `YYYY-MM`**                 | true       |
 | endDate   | string | Data is fetched till this date (this date not included). **Format: `YYYY-MM`** | true       |
 
-Example Request URL
+**Example Request URL**
+
 `https://berkleyearth-air-quality-api.herokuapp.com/air-quality/monthly-average/United_States_of_America/New_York/New_York_City?startDate=2019-01&endDate=2020--01`
 
 **Response**
