@@ -4,17 +4,18 @@ const axios = require("axios");
 
 router.get("/countries", function (req, res, next) {
   axios
-    .get(
-      "http://berkeleyearth.lbl.gov/air-quality/maps/cities/country_averages.json"
-    )
-    .then((d) => {
-      let countries = d.data.Countries.map((el) => {
-        return {
-          countryName: el[0],
-          countryID: el[0].replace(/ /g, "_"),
-        };
-      });
-      res.json(countries);
+  .get("http://berkeleyearth.lbl.gov/air-quality/maps/cities/city_list.json")
+  .then((d) => {
+    let countries = [];
+    d.data.forEach((country) => {
+          let obj = {
+            countryName: country.country.replace(/_/g, " "),
+            countryID: country.country,
+          };
+          countries.push(obj);
+        });
+        res.json(countries);
+        
     })
     .catch((error) => res.json({ error: error.message }));
 });

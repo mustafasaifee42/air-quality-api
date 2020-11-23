@@ -5,6 +5,7 @@ const listRouter = require("./routes/list");
 const HourDataRouter = require("./routes/hourly-data");
 const DailyAverageDataRouter = require("./routes/daily-average");
 const MonthlyAverageDataRouter = require("./routes/monthly-average");
+const AllCititesDataRouter = require("./routes/all-cities");
 const app = express();
 
 app.use(cors());
@@ -17,6 +18,7 @@ app.get("/", function (req, res) {
 });
 
 app.use("/list", listRouter);
+app.use("/air-quality/all-cities", AllCititesDataRouter);
 app.use("/air-quality/hourly-data", HourDataRouter);
 app.use("/air-quality/daily-average", DailyAverageDataRouter);
 app.use("/air-quality/monthly-average", MonthlyAverageDataRouter);
