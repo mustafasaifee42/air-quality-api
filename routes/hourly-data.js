@@ -4,6 +4,7 @@ const axios = require("axios");
 const { getHours } = require("../utils/getDateTimeRange");
 const { getDataAsObj } = require("../utils/getDataAsObj");
 const { getHourlyData } = require("../utils/getFinalData");
+const { formatNumber } = require("../utils/formatNumber");
 
 router.get("/:country", function (req, res, next) {
   axios
@@ -21,9 +22,7 @@ router.get("/:country", function (req, res, next) {
       } else {
         const dateTime = new Date();
         const dataAsObj = getDataAsObj(d.data);
-        let dateTimeValue = `${dateTime.getUTCFullYear()}-${
-          dateTime.getUTCMonth() + 1
-        }-${dateTime.getUTCDate()}T${dateTime.getUTCHours() - 1}:00:00`;
+        const dateTimeValue = `${dateTime.getUTCFullYear()}-${formatNumber(dateTime.getUTCMonth() + 1 )}-${formatNumber(dateTime.getUTCDate())}T${formatNumber(dateTime.getUTCHours() - 1)}:00:00`;
         const dataFinal = getHourlyData(dataAsObj, [dateTimeValue]);
         res.json(dataFinal[0]);
       }
@@ -46,10 +45,8 @@ router.get("/:country/:region", function (req, res, next) {
         res.json(dataFinal);
       } else {
         const dateTime = new Date();
-        const dataAsObj = getDataAsObj(d.data);
-        let dateTimeValue = `${dateTime.getUTCFullYear()}-${
-          dateTime.getUTCMonth() + 1
-        }-${dateTime.getUTCDate()}T${dateTime.getUTCHours() - 1}:00:00`;
+        const dataAsObj = getDataAsObj(d.data);        
+        const dateTimeValue = `${dateTime.getUTCFullYear()}-${formatNumber(dateTime.getUTCMonth() + 1 )}-${formatNumber(dateTime.getUTCDate())}T${formatNumber(dateTime.getUTCHours() - 1)}:00:00`;
         const dataFinal = getHourlyData(dataAsObj, [dateTimeValue]);
         res.json(dataFinal[0]);
       }
@@ -73,9 +70,7 @@ router.get("/:country/:region/:city", function (req, res, next) {
       } else {
         const dateTime = new Date();
         const dataAsObj = getDataAsObj(d.data);
-        let dateTimeValue = `${dateTime.getUTCFullYear()}-${
-          dateTime.getUTCMonth() + 1
-        }-${dateTime.getUTCDate()}T${dateTime.getUTCHours() - 1}:00:00`;
+        const dateTimeValue = `${dateTime.getUTCFullYear()}-${formatNumber(dateTime.getUTCMonth() + 1 )}-${formatNumber(dateTime.getUTCDate())}T${formatNumber(dateTime.getUTCHours() - 1)}:00:00`;
         const dataFinal = getHourlyData(dataAsObj, [dateTimeValue]);
         res.json(dataFinal[0]);
       }
