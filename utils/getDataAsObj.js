@@ -9,7 +9,7 @@ const getDataAsObj = (d) => {
       else return el.split("\t");
     });
   let dataAsObj = [];
-  for (let i = 1; i < data.length; i++) {
+  for (let i = 1; i < data.length - 1; i++) {
     let obj = {};
     let objFinal = {};
     for (let k = 0; k < data[0].length; k++) {

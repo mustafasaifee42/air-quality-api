@@ -22,9 +22,18 @@ router.get("/:country", function (req, res, next) {
       } else {
         const dateTime = new Date();
         const dataAsObj = getDataAsObj(d.data);
+        if(req.query.mostRecent){
+          let dataFinal = []
+          for(let i  = dataAsObj.length - 1; i > dataAsObj.length - 1 - parseInt(req.query.mostRecent); i--){
+            dataFinal.push(dataAsObj[i])
+          }
+          res.json(dataFinal);
+        }
+        else {
         const dateTimeValue = `${dateTime.getUTCFullYear()}-${formatNumber(dateTime.getUTCMonth() + 1 )}-${formatNumber(dateTime.getUTCDate())}T${formatNumber(dateTime.getUTCHours() - 1)}:00:00`;
         const dataFinal = getHourlyData(dataAsObj, [dateTimeValue]);
         res.json(dataFinal[0]);
+        }
       }
     })
     .catch((error) => res.json({ error: error.message }));
@@ -45,10 +54,19 @@ router.get("/:country/:region", function (req, res, next) {
         res.json(dataFinal);
       } else {
         const dateTime = new Date();
-        const dataAsObj = getDataAsObj(d.data);        
+        const dataAsObj = getDataAsObj(d.data);
+        if(req.query.mostRecent){
+          let dataFinal = []
+          for(let i  = dataAsObj.length - 1; i > dataAsObj.length - 1 - parseInt(req.query.mostRecent); i--){
+            dataFinal.push(dataAsObj[i])
+          }
+          res.json(dataFinal);
+        }
+        else {
         const dateTimeValue = `${dateTime.getUTCFullYear()}-${formatNumber(dateTime.getUTCMonth() + 1 )}-${formatNumber(dateTime.getUTCDate())}T${formatNumber(dateTime.getUTCHours() - 1)}:00:00`;
         const dataFinal = getHourlyData(dataAsObj, [dateTimeValue]);
         res.json(dataFinal[0]);
+        }
       }
     })
     .catch((error) => res.json({ error: error.message }));
@@ -70,9 +88,18 @@ router.get("/:country/:region/:city", function (req, res, next) {
       } else {
         const dateTime = new Date();
         const dataAsObj = getDataAsObj(d.data);
+        if(req.query.mostRecent){
+          let dataFinal = []
+          for(let i  = dataAsObj.length - 1; i > dataAsObj.length - 1 - parseInt(req.query.mostRecent); i--){
+            dataFinal.push(dataAsObj[i])
+          }
+          res.json(dataFinal);
+        }
+        else {
         const dateTimeValue = `${dateTime.getUTCFullYear()}-${formatNumber(dateTime.getUTCMonth() + 1 )}-${formatNumber(dateTime.getUTCDate())}T${formatNumber(dateTime.getUTCHours() - 1)}:00:00`;
         const dataFinal = getHourlyData(dataAsObj, [dateTimeValue]);
         res.json(dataFinal[0]);
+        }
       }
     })
     .catch((error) => res.json({ error: error.message }));
