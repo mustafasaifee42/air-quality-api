@@ -7,6 +7,7 @@ const DailyAverageDataRouter = require("./routes/daily-average");
 const MonthlyAverageDataRouter = require("./routes/monthly-average");
 const SummaryDataRouter = require("./routes/summary");
 const AllCititesDataRouter = require("./routes/all-cities");
+const AllData = require("./routes/all-data");
 const app = express();
 
 app.use(cors());
@@ -24,6 +25,7 @@ app.use("/air-quality/hourly-data", HourDataRouter);
 app.use("/air-quality/daily-average", DailyAverageDataRouter);
 app.use("/air-quality/monthly-average", MonthlyAverageDataRouter);
 app.use("/air-quality/summary", SummaryDataRouter);
+app.use("/air-quality/all-data", AllData);
 
 // start the server listening for requests
 app.listen(process.env.PORT || 3000, () => console.log("Server is running..."));
