@@ -11,7 +11,7 @@
     "cors": "^2.8.5",
     "d3-array": "^2.4.0",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "~4.17.3",
     "github-markdown-css": "^4.0.0",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
